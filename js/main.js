@@ -1,29 +1,32 @@
 $(document).ready(function () {
 
 
+  var menuDrop = $('li h3')
+  var isOpen = false;
   $('.dropdown').hide();
 
 
-  //variabile parente dropdown
-  var p = $(this).parent();
-  $('.dropdown').not(p).hide;
 
-  $('li h3').click(function () {
+  $(menuDrop).click(function (e) {
     $('.dropdown').hide();
     $(this).siblings('.dropdown').toggle();
+    e.stopPropagation();
+    console.log(isOpen)
   })
 
-  // $(window).click(function () {
-  //   $('.dropdown').hide();
-  // })
+
+  $(window).click(function (e) {
+    $('.dropdown').hide();
+  })
 
 
   $(".fas").click(function () {
-    $(".hamburger-menu").show();
+    $(".hamburger-menu").addClass('fadeIn');
   });
 
+
   $(".close").click(function () {
-    $(".hamburger-menu").hide();
+    $(".hamburger-menu").removeClass('fadeIn');
   });
 
 

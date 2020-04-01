@@ -7,19 +7,27 @@
 header {
   display: flex;
   justify-content: space-around;
-  width:100%;
+  width: 100%;
   height: 84px;
-  align-items:center;
+  align-items: center;
   padding: 0 auto;
 }
 
 header .header-left {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
+
+.header-left a {
+  text-decoration: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+
 header .header-right {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 .header-left a {
@@ -32,9 +40,7 @@ header .header-right {
   height: 100%;
   margin: 0 20px;
   cursor: pointer;
-  
 }
-
 
 .header-right ul li .dropdown {
   position: absolute;
@@ -42,11 +48,28 @@ header .header-right {
   left: -10px;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 1px 24px rgba(45,62,80,0.12);
+  box-shadow: 0 1px 24px rgba(45, 62, 80, 0.12);
 }
 
+.dropdown li {
+  margin-top: 15px;
+}
 
-.header-right > a {
+.btn {
+  display: inline-block;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  background-color: rgb(235, 0, 141);
+  border-style: none;
+  border-radius: 2rem;
+  transition: all 0.2s ease 0s;
+  padding: 0.625em 1.5em;
+}
+
+.header-right>a {
   display: none;
 }
 
@@ -62,6 +85,11 @@ header .header-right {
   min-height: 100vh;
   background: #fff;
 }
+
+.fadeIn {
+  display: block;
+}
+
 .hamburger-icon {
   display: none;
   position: absolute;
@@ -87,23 +115,21 @@ header .header-right {
 }
 
 
-@media screen and (max-width: 1000px)
-{
-    .header-right ul, button  {
-        display: none;
-    }
+@media screen and (max-width: 1000px) {
 
-    .hamburger-icon {
-      display: block;
-    }
-  
+  .header-right ul,
+  button {
+    display: none;
+  }
 
-  
+  .hamburger-icon {
+    display: block;
+  }
+
 }
 
-@media screen and (min-width: 1000px)
-{
-
-
-  
+@media screen and (min-width: 1001px) {
+  .fadeIn {
+    display: none;
+  }
 }
