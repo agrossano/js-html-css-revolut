@@ -118,7 +118,7 @@ header .header-right {
 @media screen and (max-width: 1000px) {
 
   .header-right ul,
-  button {
+  .btn {
     display: none;
   }
 

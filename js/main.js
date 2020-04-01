@@ -2,22 +2,19 @@ $(document).ready(function () {
 
 
   var menuDrop = $('li h3')
-  var isOpen = false;
   $('.dropdown').hide();
-
 
 
   $(menuDrop).click(function (e) {
     $('.dropdown').hide();
-    $(this).siblings('.dropdown').toggle();
+    $(this).siblings('.dropdown').show();
     e.stopPropagation();
-    console.log(isOpen)
-  })
+  });
 
 
-  $(window).click(function (e) {
+  $(document).click(function (e) {
     $('.dropdown').hide();
-  })
+  });
 
 
   $(".fas").click(function () {
