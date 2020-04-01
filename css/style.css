@@ -6,11 +6,11 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width:100%;
   height: 84px;
   align-items:center;
-  padding: 0 300px;
+  padding: 0 auto;
 }
 
 header .header-left {
@@ -26,20 +26,84 @@ header .header-right {
   margin-left: 30px;
 }
 
-header li {
+.header-right li {
   display: inline-block;
   position: relative;
   height: 100%;
   margin: 0 20px;
+  cursor: pointer;
   
 }
 
 
-ul li .dropdown {
+.header-right ul li .dropdown {
   position: absolute;
   top: 30px;
   left: -10px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 1px 24px rgba(45,62,80,0.12);
+}
+
+
+.header-right > a {
+  display: none;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+}
+.hamburger-icon {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: rgb(139, 149, 158);
+  font-size: 20px;
+}
+
+
+.hamburger-menu li {
+  list-style: none;
+  padding: 20px;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: rgb(139, 149, 158);
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 1000px)
+{
+    .header-right ul, button  {
+        display: none;
+    }
+
+    .hamburger-icon {
+      display: block;
+    }
+  
+
+  
+}
+
+@media screen and (min-width: 1000px)
+{
+
+
+  
 }
